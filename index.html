@@ -1,125 +1,46 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>首页 - RodiaS 论坛 - RS 爱好者的聚集地</title>
+  <title>首页 - OIer Web</title>
   <link rel="stylesheet" href="/css/mdui.min.css"/>
-      <meta charset="utf-8">
-    <style type="text/css">
-        .div1,div{
-            margin:0 auto;
-        }
-    </style>
 </head>
 <body>
-  
-  
+
   <div class="mdui-appbar">
-    <div class="mdui-toolbar mdui-color-teal">
-    <a href="javascript:;" class="mdui-typo-title">RodiaS 论坛 - 为滚动的天空爱好者们量身定制的论坛</a>
-    <div class="mdui-toolbar-spacer"></div>
-    <a href="javascript:;" class="mdui-btn mdui-btn-icon">
-      <i class="mdui-icon material-icons">refresh</i>
-    </a>
-  </div>
-    <div class="mdui-tab mdui-color-teal" mdui-tab>
-      
-      <a href="/#" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">store</i>
-        <label>主页</label>
-      </a>
-      <a href="/dis" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">chat</i>
-        <label>讨论</label>
-      </a>
-      <a href="/blog" class="mdui-ripple mdui-ripple-white">
-       <i class="mdui-icon material-icons">library_books</i>
-        <label>博客</label>
-      </a>
-      <a href="/gchat" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">group</i>
-        <label>群组</label>
-      </a>
-      <a href="/ancm" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">announcement</i>
-        <label>公告</label>
-      </a>
-      <a href="/adm/riso/accc/paspus.html" class="mdui-ripple mdui-ripple-white">
-        <i class="mdui-icon material-icons">settings</i>
-        <label>管理后台</label>
-      </a>
+    <div class="mdui-toolbar mdui-color-blue">
+      <a href="javascript:;" class="mdui-typo-title">OIer Web</a>
+      <div class="mdui-toolbar-spacer"></div>
+      <a href="/login.html">登录</a>
+      <a href="/regis.html">注册</a>
+    </div>
+    <div class="mdui-tab mdui-color-blue" mdui-tab>
+      <a href="/" class="mdui-ripple mdui-ripple-white">首页</a>
+      <a href="/matter" class="mdui-ripple mdui-ripple-white">OIer Matter</a>
+      <a href="/note" class="mdui-ripple mdui-ripple-white">OIer Note</a>
     </div>
   </div>
+  
+  <p></p>
 
   <div class="mdui-container-fluid">
-    <div id="tab1">
-      <div class="mdui-card">
-  <div class="mdui-card-media">
-    <img src="https://cdn.luogu.com.cn/upload/image_hosting/ked7pbyh.png"/>
-    <div class="mdui-card-media-covered">
-      <div class="mdui-card-primary">
-        <div class="mdui-card-primary-title">欢迎来到RodiaS论坛！</div>
-        <div class="mdui-card-primary-subtitle">A great place for Rolling Sky fans.</div>
+    <div class="mdui-card">
+      <div class="mdui-card-content">
+        <h2>站内公告</h2>
+        <p>欢迎来到OIer Web！</p>
+        
+        <p>本网站旨在将一些生活中用到的功能给OIers专门定制一个。</p>
       </div>
     </div>
   </div>
-  
-      </div></div></div>
-  
-  <div class="mdui-divider"></div>
+  <p></p>
+  <div class="mdui-bottom-nav mdui-bottom-nav-text-auto mdui-color-teal">
+  <h6>Powered By OIer Web.</h6>
+  <h6>Copyright 2022 Beijing.</h6>
+</div>
 
-  
-  <div class="div1" id="div1">
-        <!-- 创建昵称和留言文本框 -->
-      <div class="mdui-textfield mdui-textfield-floating-label">
-      <label class="mdui-textfield-label">昵称：</label>
-      <input class="mdui-textfield-input" type="email" id="user" name="user"/>
-  </div>
-     <div class="mdui-textfield mdui-textfield-floating-label">
-      <label class="mdui-textfield-label">动态：</label>
-      <input class="mdui-textfield-input" type="email1" id="lang" name="user"/>
-  </div>
-    <button class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" id="btn">发射动态</button>
-
-    
-    </div>
-  
-
-    
-
-<script type="text/javascript">
-    var user = document.getElementById('user');
-    var lang = document.getElementById('lang');
-  var showtime = function () {
-    var nowdate = new Date();
-    var year = nowdate.getFullYear(),
-        month = nowdate.getMonth() + 1,
-        date = nowdate.getDate(),
-        day = nowdate.getDay(),
-        week = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
-        h = nowdate.getHours(),
-        m = nowdate.getMinutes(),
-        s = nowdate.getSeconds(),
-        h = checkTime(h),
-        m = checkTime(m),
-        s = checkTime(s);
-    return year + "年" + month + "月" + date + "日" + week[day] + " " + h +":" + m + ":" + s;
-}
-    document.getElementById('btn').onclick = function(){
-        var cont = document.createElement('div');
-        var div = document.getElementById("showtime");
-        cont.innerHTML = '<p>' + user.value + ':' + lang.value + '</p><hr>';
-        div.innerHTML = '<p>at' + showtime() + '</p><hr>';
-        document.getElementById('div1').appendChild(cont);
-        document.getElementById('div1').appendChild(div);
-        user.value = '';
-        lang.value = '';
-    }
-</script>
-</html>
-    
   <script src="/js/mdui.min.js"></script>
+  
 </body>
 </html>
